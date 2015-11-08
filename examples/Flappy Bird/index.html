@@ -1,0 +1,39 @@
+<!--
+Optimisation : 1 seule spritesheet et pas 1 texture par objet
+pas besoin de charger dans .js si chargé dans .html
+-->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>FlappyBird</title>
+    <style>
+        body {
+            margin:0;
+            padding:0;
+        }
+    </style>
+</head>
+<body>
+	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+	<script type="text/javascript" src="js/pixi.js"></script>
+	<script type="text/javascript" src="js/Main.js"></script>
+
+	<script type="text/javascript">
+		// -----------------------------------------------------------------------------
+		// Création du rendu (500x700 et couleur d'arrière plan)
+		var renderer = PIXI.autoDetectRenderer(500, 700, {backgroundColor:0x70C6CE});
+		// Ajout du rendu au sein de 'body'
+		document.body.appendChild(renderer.view);
+		
+		// Création de la scène, nouveau container
+		var stage = new PIXI.Container();
+		
+		// Instanciation de la classe principale
+		var main = new Main();
+		// Ajout de la classe principale à la scène comme enfant
+		stage.addChild(main);
+	</script>
+</body>
+</html>
