@@ -1,3 +1,23 @@
 Les éléments graphiques :
 
-Une terrain en 4 parties
+
+
+Page d'accueil:
+-nom du jeu
+-lancer le jeu
+-backgroung: arbre, lune, monstre ? 
+
+page de chargement ?
+
+page de jeu :
+-Une terrain en 4 parties
+-pts gagnés
+-vie
+-monstres
+-monstre de décors
+-lune
+-fond sombre
+
+Game Over:
+-fantôme 
+-Game Over
