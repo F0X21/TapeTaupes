@@ -1,4 +1,4 @@
-Les éléments graphiques :
+﻿Les éléments graphiques :
 
 
 
@@ -21,3 +21,7 @@ page de jeu :
 Game Over:
 -fantôme 
 -Game Over
+
+
+
+//fin du fichier
