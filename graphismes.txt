@@ -3,19 +3,22 @@
 
 
 Page d'accueil:
--nom du jeu
+-nom du jeu	Zombie Attack / Rise of Zombies / Zombie salyer ?
 -lancer le jeu
 -backgroung: arbre, lune, monstre ? 
 
 page de chargement ?
 
+-écran des régles
+-écran des scores en fin de jeu
+
 page de jeu :
 -Une terrain en 4 parties
 -pts gagnés
 -vie
--monstres
+-monstres	zombies "normaux" = 1 point / zombies "spéciaux" = 2 points (invoqués aléatoirement durant la phase de jeu) / enfants (?) = -1 point
 -monstre de décors
--lune
+-lune		rotation de la lune au fur et a mesure de la game ?
 -fond sombre
 
 Game Over:
