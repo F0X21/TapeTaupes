@@ -16,7 +16,24 @@
         <script type="text/javascript" src="js/Ball.js"></script>
         
         <script type="text/javascript">
-            var renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor:0x008bff},  {antialias: true});
+            
+            var wWin = window.innerWidth,
+                hWin = window.innerHeight;
+            
+            if (wWin <= 480) {
+                //Charger les images versions 360
+            } else {
+                //Charger les images version 480
+            }
+            
+            if (wWin <= 800) {
+                //stage = wWin*hWin
+                var renderer = PIXI.autoDetectRenderer(wWin, hWin, {backgroundColor:0x008bff},  {antialias: true});
+            } else {
+                //stage = 800*600
+                var renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor:0x008bff},  {antialias: true});
+            }
+            
             
             document.body.appendChild(renderer.view);
             
