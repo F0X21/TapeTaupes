@@ -1,6 +1,6 @@
 function Ball(playerLeft, playerRight) {
     
-     PIXI.Graphics.call(this);
+    PIXI.Graphics.call(this);
     
     this._VELOCITY_X = 10;
     this._VELOCITY_Y = 0;

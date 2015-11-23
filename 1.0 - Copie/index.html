@@ -8,12 +8,20 @@
         <meta name="author" content="Jacquelin Benoit">
         <meta name="description" content="PIXI.js Whack-a-Mole">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <style>
+            html {
+/*                cursor: none;*/
+            }
+        </style>
+        
     </head>
     <body>
         
         <script type="text/javascript" src="js/pixi.min.js"></script>
         <script type="text/javascript" src="js/Main.js"></script>
-        <script type="text/javascript" src="js/Ball.js"></script>
+<!--        <script type="text/javascript" src="js/Hammer.js"></script>-->
+        <script type="text/javascript" src="js/Mole.js"></script>
         
         <script type="text/javascript">
             
@@ -31,7 +39,7 @@
                 var renderer = PIXI.autoDetectRenderer(wWin, hWin, {backgroundColor:0x008bff},  {antialias: true});
             } else {
                 //stage = 800*600
-                var renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor:0x008bff},  {antialias: true});
+                var renderer = PIXI.autoDetectRenderer(800, 640, {backgroundColor:0x008bff},  {antialias: true});
             }
             
             
@@ -42,13 +50,13 @@
             var main = new Main();
             stage.addChild(main);
             
-//            animate();
-//            
-//            function animate() {
-//                requestAnimationFrame(animate);
-//                renderer.render(stage);
-////                main.update();
-//            }
+            animate();
+            
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(stage);
+                main.update();
+            }
                 
         </script>
         
