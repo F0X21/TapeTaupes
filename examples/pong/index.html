@@ -9,7 +9,7 @@
     </head>
     <body>
         <script type="text/javascript" src="js/pixi.min.js"></script>
-        <script type="text/javascript" src="js/Main.js"></script>
+        <script type="text/javascript" src="js/Ppl.js"></script>
         <script type="text/javascript" src="js/Player.js"></script>
         <script type="text/javascript" src="js/Ball.js"></script>
         
@@ -20,15 +20,15 @@
             
             var stage = new PIXI.Container();
             
-            var main = new Main();
-            stage.addChild(main);
+            var ppl = new Ppl();
+            stage.addChild(ppl);
             
             animate();
             
             function animate() {
                 requestAnimationFrame(animate);
                 renderer.render(stage);
-                main.update();
+                ppl.update();
             }
                 
         

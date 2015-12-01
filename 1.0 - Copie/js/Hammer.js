@@ -20,7 +20,7 @@ function Hammer() {
     this.addChild(this.texture_shadow);
     
     
-    console.log("Hammer is OK");
+//    console.log("Hammer is OK");
     
     
 }
@@ -28,16 +28,19 @@ function Hammer() {
 Hammer.prototype = Object.create(PIXI.Sprite.prototype);
 
 Hammer.prototype.update = function() {
-    this.x = mouseX;
-    this.y = mouseY;
+    
+    if (!isUsingKeyboard) {
+        this.x = mouseX;
+        this.y = mouseY;
+    }
 };
 
 Hammer.prototype.hammerDown = function () {
-    console.log("Hammer of justice crushes you");
+//    console.log("Hammer of justice crushes you");
     this.texture_hammer.rotation -= 0.9;
 };
 
 Hammer.prototype.hammerUp = function () {
-    console.log("Overpower!");
+//    console.log("Overpower!");
     this.texture_hammer.rotation += 0.9;
 };

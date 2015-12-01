@@ -1,4 +1,4 @@
-function Main () {
+function Ppl () {
    
     PIXI.Container.call(this);
 
@@ -24,15 +24,15 @@ function Main () {
 }
 
 
-Main.prototype = Object.create(PIXI.Container.prototype); //Main hérite de PIXI.container
+Ppl.prototype = Object.create(PIXI.Container.prototype); //Main hérite de PIXI.container
 
-Main.prototype.update = function () {
+Ppl.prototype.update = function () {
     this.playerRight.playerRightMovement();
     this.ball.update();
 };
 
 
-Main.prototype._addBall = function () {
+Ppl.prototype._addBall = function () {
     this.ball = new Ball(this.playerLeft, this.playerRight);
     this.ball.x =(renderer.width - this.ball.width) / 2;
     this.ball.y =(renderer.height - this.ball.height) / 2;

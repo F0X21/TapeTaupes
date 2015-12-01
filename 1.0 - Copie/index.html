@@ -18,16 +18,19 @@
     </head>
     <body>
         
+<!--        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>-->
         <script type="text/javascript" src="js/pixi.min.js"></script>
+        <script type="text/javascript" src="js/Start.js"></script>
         <script type="text/javascript" src="js/Main.js"></script>
         <script type="text/javascript" src="js/Hammer.js"></script>
         <script type="text/javascript" src="js/Mole.js"></script>
-        <script type="text/javascript" src="js/Position.js"></script>
+        <script type="text/javascript" src="js/SuperMole.js"></script>
         
         <script type="text/javascript">
             
             var wWin = window.innerWidth,
                 hWin = window.innerHeight;
+            var renderer;
 //            
 //            if (wWin <= 480) {
 //                //Charger les images versions 360
@@ -37,20 +40,26 @@
             
             if (wWin <= 800) {
                 //stage = wWin*hWin
-                var renderer = PIXI.autoDetectRenderer(wWin, hWin, {backgroundColor:0x008bff},  {antialias: true});
+                renderer = PIXI.autoDetectRenderer(wWin, hWin, {backgroundColor:0x008bff},  {antialias: true});
             } else {
                 //stage = 800*600
-                var renderer = PIXI.autoDetectRenderer(800, 640, {backgroundColor:0x008bff},  {antialias: true});
+                renderer = PIXI.autoDetectRenderer(800, 640, {backgroundColor:0x008bff},  {antialias: true});
             }
             
             
             document.body.appendChild(renderer.view);
             
             var stage = new PIXI.Container();
+            var terrain4 = new PIXI.Container();
+            var terrain3 = new PIXI.Container();
+            var terrain2 = new PIXI.Container();
+            var terrain1 = new PIXI.Container();
             
-            var main = new Main();
-            stage.addChild(main);
+//            var main = new Main();
+//            stage.addChild(main);
             
+            var start = new Start();
+            stage.addChild(start);
 //            animate();
 //            
 //            function animate() {
